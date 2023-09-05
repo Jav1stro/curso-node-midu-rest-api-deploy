@@ -1,7 +1,7 @@
 import pc from "picocolors";
 import express, { json } from "express";
 import { corsMiddleware } from "./middlewares/cors.js";
-import { moviesRouter } from "./routes/movies";
+import { moviesRouter } from "./routes/movies.js";
 
 const app = express();
 app.use(json());

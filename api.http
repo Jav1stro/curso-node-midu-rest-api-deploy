@@ -2,10 +2,9 @@
 GET http://localhost:1234/movies
 
 ### GET movie by id
-GET http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
-
+GET http://localhost:1234/movies/f7224653-441e-4b41-932a-9de1a7d8c92a
 ### GET movie by genre
-GET http://localhost:1234/movies?genre=biography
+GET http://localhost:1234/movies?genre=crime
 
 ### Create Movie with POST
 
@@ -27,12 +26,12 @@ Content-Type: application/json
 }
 
 ### Actualizar una pelicula
-PATCH http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+PATCH http://localhost:1234/movies/f7224653-441e-4b41-932a-9de1a7d8c92a
 Content-Type: application/json
 
 {
-    "genre": ["Sci-Fi"]
+    "title": "leyen edited"
 }
 
 ###DELETE movie
-DELETE http://localhost:1234/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
+DELETE http://localhost:1234/movies/f7224653-441e-4b41-932a-9de1a7d8c92a
