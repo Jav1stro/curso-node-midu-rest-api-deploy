@@ -2,7 +2,7 @@
 GET http://localhost:1234/movies
 
 ### GET movie by id
-GET http://localhost:1234/movies/f7224653-441e-4b41-932a-9de1a7d8c92a
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
 ### GET movie by genre
 GET http://localhost:1234/movies?genre=crime
 

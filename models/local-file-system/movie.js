@@ -1,8 +1,8 @@
 import { randomUUID } from "node:crypto";
-import { readJSON } from "../utils.js";
+// import { readJSON } from "../../utils";
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
-const movies = require("../data/movies.json");
+const movies = require("../../data/movies.json");
 
 // const movies = [
 //   {

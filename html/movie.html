@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de la Película</title>
+</head>
+<body>
+    <h1>Detalles de la Película</h1>
+    <div id="movie-details">
+        <h2>Título: <span id="movie-title"></span></h2>
+        <p>Año: <span id="movie-year"></span></p>
+        <p>Director: <span id="movie-director"></span></p>
+        <!-- Puedes agregar más campos aquí según tus necesidades -->
+    </div>
+
+    <script type="module">
+        const movieDetailsContainer = document.getElementById('movie-details');
+        const movieTitleElement = document.getElementById('movie-title');
+        const movieYearElement = document.getElementById('movie-year');
+        const movieDirectorElement = document.getElementById('movie-director');
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Obtén el movieId del query de la URL
+        const movieId = getQueryParam('id');
+        console.log('movieID',movieId)
+        fetch(`http://localhost:1234/movies/${movieId}`)
+            .then((res) => res.json())
+            .then((movie) => {
+                movieTitleElement.textContent = movie.movie.title;
+                movieYearElement.textContent = movie.movie.year;
+                movieDirectorElement.textContent = movie.movie.director;
+                console.log(movie)
+                // Puedes actualizar más elementos aquí según tus necesidades
+            })
+            .catch((error) => {
+                console.error('Error al cargar los detalles de la película:', error);
+            });
+    </script>
+</body>
+</html>

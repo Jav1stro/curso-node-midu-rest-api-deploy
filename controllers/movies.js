@@ -1,4 +1,4 @@
-import { MovieModel } from "../models/movie.js";
+import { MovieModel } from "../models/local-file-system/movie.js";
 import { validateMovie, validatePartialMovie } from "../schemas/movies.js";
 
 export class MovieController {
@@ -12,7 +12,7 @@ export class MovieController {
     const { id } = req.params;
     const movie = await MovieModel.getById({ id });
     if (movie) return res.json({movie: movie, message:'Movie founded!'});
-    res.status(404).json({ message: "Movie not found" });
+    res.status(404).json({ message: "Movie not founasdd" });
   }
 
   static async create(req, res) {
