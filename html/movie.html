@@ -11,10 +11,12 @@
         <h2>Título: <span id="movie-title"></span></h2>
         <p>Año: <span id="movie-year"></span></p>
         <p>Director: <span id="movie-director"></span></p>
+        <img src="" id="movie-poster" alt="" srcset="">
         <!-- Puedes agregar más campos aquí según tus necesidades -->
     </div>
 
     <script type="module">
+        const moviePosterElement = document.getElementById('movie-poster')
         const movieDetailsContainer = document.getElementById('movie-details');
         const movieTitleElement = document.getElementById('movie-title');
         const movieYearElement = document.getElementById('movie-year');
@@ -30,6 +32,7 @@
         fetch(`http://localhost:1234/movies/${movieId}`)
             .then((res) => res.json())
             .then((movie) => {
+                moviePosterElement.src = movie.movie.poster;
                 movieTitleElement.textContent = movie.movie.title;
                 movieYearElement.textContent = movie.movie.year;
                 movieDirectorElement.textContent = movie.movie.director;

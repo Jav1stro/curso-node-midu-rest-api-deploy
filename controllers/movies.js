@@ -1,9 +1,11 @@
-import { MovieModel } from "../models/local-file-system/movie.js";
+// import { MovieModel } from "../models/local-file-system/movie.js";
+import { MovieModel } from "../models/mysql/movie.js";
 import { validateMovie, validatePartialMovie } from "../schemas/movies.js";
 
 export class MovieController {
   static async getAll(req, res) {
     const { genre } = req.query;
+    // const genre = 'Sci-Fi'
     const movies = await MovieModel.getAll({ genre });
     res.json(movies);
   }

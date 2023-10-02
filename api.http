@@ -2,7 +2,7 @@
 GET http://localhost:1234/movies
 
 ### GET movie by id
-GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+GET http://localhost:1234/movies/ab55795a-5c7f-11ee-867f-0b04f2b3a938
 ### GET movie by genre
 GET http://localhost:1234/movies?genre=crime
 
@@ -12,8 +12,8 @@ POST http://localhost:1234/movies
 Content-Type: application/json
 
 {
-    "title": "La leyenda de la Leyenda",
-    "year": 1999,
+    "title": "Pedro y el lobo",
+    "year": 1909,
     "director": "Javi",
     "duration": 130,
     "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
